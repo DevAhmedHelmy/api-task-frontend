@@ -22,6 +22,7 @@
         </template>
       </v-list>
     </v-navigation-drawer>
+
     <v-toolbar class="indigo" dark app>
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-toolbar-title>Sidebar template</v-toolbar-title>
@@ -30,6 +31,8 @@
         <v-icon>home</v-icon>
       </v-btn>
     </v-toolbar>
+
+
     <v-content>
       <v-fade-transition mode="out-in">
         <router-view></router-view>
@@ -51,16 +54,29 @@ export default {
         router: true,
         title: 'Home',
         icon: 'home',
-      }, {
-        href: 'examples',
+      },{
+        href: 'customers',
         router: true,
-        title: 'Example',
+        title: 'Customers',
         icon: 'extension',
-      }, {
+	  }, 
+	  {
         href: 'about',
         router: true,
         title: 'About',
         icon: 'domain',
+	  },
+	  {
+        href: 'login',
+        router: true,
+        title: 'Login',
+        icon: 'extension',
+      },
+	  {
+        href: 'logout',
+        router: true,
+        title: 'Logout',
+        icon: 'extension',
       }],
     };
   },
